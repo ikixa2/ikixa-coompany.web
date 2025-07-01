@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ikixa Company</title>
+  <link rel="icon" href="favicon-zoc.ico" type="image/x-icon"> <!-- FAVICON personalizado -->
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background-color: #000000;
@@ -67,6 +73,7 @@
       display: inline-block;
       font-size: 18px;
       transition: background-color 0.3s;
+      cursor: pointer;
     }
 
     .button:hover {
@@ -84,12 +91,25 @@
     a {
       color: #39ff14;
     }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #39ff14;
+      margin: 40px auto;
+      width: 60%;
+    }
+
+    /* Ocultar por defecto la sección ZCO DETALLES */
+    #zco-detalles {
+      display: none;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Logo de Ikixa Company">
+    <img src="logo-ikixa.png" alt="Logo de Ikixa Company">
     <h1>Ikixa Company</h1>
   </header>
 
@@ -107,16 +127,22 @@
   </section>
 
   <section id="productos">
-    <h2>Producto destacado</h2>
+    <h2>Nuestros Programas</h2>
+
+    <!-- Programa disponible -->
     <h3>🔧 Optimizador de PC - ¡Disponible ahora!</h3>
     <p>Mejora el rendimiento de tu computadora con nuestra herramienta profesional.</p>
     <p>✔ Borra archivos basura<br>✔ Limpia RAM<br>✔ Optimiza memoria virtual<br>✔ Desactiva procesos innecesarios</p>
-
-    <!-- ✅ BOTÓN FUNCIONAL DE DESCARGA VIA GOOGLE DRIVE -->
     <a href="https://drive.google.com/file/d/1bX4xDtN85reEORT7XdKjhoO5jpTkWDd6/view?usp=sharing" class="button" target="_blank">
       Descargar programa completo (.zip)
     </a>
 
+    <hr>
+
+    <!-- Programa próximo -->
+    <h3>🕒 Próximamente: ZCO Monitor</h3>
+    <p>Monitorea el rendimiento de PCs gamers de gama baja y alta.</p>
+    <button class="button" onclick="mostrarDetalles()">Saber más</button>
   </section>
 
   <section id="colaboracion">
@@ -130,6 +156,22 @@
     </p>
   </section>
 
+  <!-- SECCIÓN ZCO DETALLES OCULTA -->
+  <section id="zco-detalles">
+    <h2>Detalles del Programa ZCO Monitor</h2>
+    <p>Programa especializado para el monitoreo de PC gamers de gama baja y alta.</p>
+    <p>
+      Nuestro programa se especializa en el monitoreo de:<br>
+      ✔ FPS<br>
+      ✔ Temperatura del CPU<br>
+      ✔ Velocidad de los ventiladores<br>
+      ✔ Porcentaje de utilización de memoria RAM<br>
+      ✔ Porcentaje de VRAM<br>
+      ✔ Porcentaje de CPU utilizado<br>
+      ✔ Porcentaje de tarjeta gráfica utilizada
+    </p>
+  </section>
+
   <section id="contacto">
     <h2>Contacto</h2>
     <p>¿Tienes dudas, quejas o sugerencias? Contáctanos:</p>
@@ -140,6 +182,15 @@
   <footer>
     <p>&copy; Ikixa Company. Todos los derechos reservados hasta el 2030.</p>
   </footer>
+
+  <!-- SCRIPT PARA MOSTRAR DETALLES -->
+  <script>
+    function mostrarDetalles() {
+      const detalles = document.getElementById("zco-detalles");
+      detalles.style.display = "block";
+      detalles.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 
 </body>
 </html>
