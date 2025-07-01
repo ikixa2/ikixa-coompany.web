@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ikixa Company</title>
+  <link rel="icon" href="favicon-zoc.ico" type="image/x-icon"> <!-- FAVICON personalizado -->
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: #000000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #000;
+      border-bottom: 3px solid #39ff14;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      height: 60px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #111;
+      border-top: 2px solid #39ff14;
+      border-bottom: 2px solid #39ff14;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #222;
+      border-bottom: 2px solid #39ff14;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .button {
+      background-color: #007BFF;
+      color: white;
+      padding: 15px 30px;
+      margin-top: 15px;
+      border: 2px solid #39ff14;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      border-top: 3px solid #39ff14;
+      font-size: 14px;
+    }
+
+    a {
+      color: #39ff14;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #39ff14;
+      margin: 40px auto;
+      width: 60%;
+    }
+
+    /* Ocultar por defecto la sección ZCO DETALLES */
+    #zco-detalles {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo-ikixa.png" alt="Logo de Ikixa Company">
+    <h1>Ikixa Company</h1>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#colaboracion">Colaboración</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenido a Ikixa Company</h2>
+    <p>Somos una compañía dedicada a crear programas para optimización y mantenimiento de PC.</p>
+    <p>Contamos con derechos de autor protegidos hasta el año 2030.</p>
+  </section>
+
+  <section id="productos">
+    <h2>Nuestros Programas</h2>
+
+    <!-- Programa disponible -->
+    <h3>🔧 Optimizador de PC - ¡Disponible ahora!</h3>
+    <p>Mejora el rendimiento de tu computadora con nuestra herramienta profesional.</p>
+    <p>✔ Borra archivos basura<br>✔ Limpia RAM<br>✔ Optimiza memoria virtual<br>✔ Desactiva procesos innecesarios</p>
+    <a href="https://drive.google.com/file/d/1bX4xDtN85reEORT7XdKjhoO5jpTkWDd6/view?usp=sharing" class="button" target="_blank">
+      Descargar programa completo (.zip)
+    </a>
+
+    <hr>
+
+    <!-- Programa próximo -->
+    <h3>🕒 Próximamente: ZCO Monitor</h3>
+    <p>Monitorea el rendimiento de PCs gamers de gama baja y alta.</p>
+    <button class="button" onclick="mostrarDetalles()">Saber más</button>
+  </section>
+
+  <section id="colaboracion">
+    <h2>Colaboración</h2>
+    <p>Nos enorgullece colaborar con:</p>
+    <h3>Zafiro Optimization Company</h3>
+    <p>
+      <a href="https://m.twitch.tv/zafigamer1/home" target="_blank">
+        Visítalos en Twitch aquí
+      </a>
+    </p>
+  </section>
+
+  <!-- SECCIÓN ZCO DETALLES OCULTA -->
+  <section id="zco-detalles">
+    <h2>Detalles del Programa ZCO Monitor</h2>
+    <p>Programa especializado para el monitoreo de PC gamers de gama baja y alta.</p>
+    <p>
+      Nuestro programa se especializa en el monitoreo de:<br>
+      ✔ FPS<br>
+      ✔ Temperatura del CPU<br>
+      ✔ Velocidad de los ventiladores<br>
+      ✔ Porcentaje de utilización de memoria RAM<br>
+      ✔ Porcentaje de VRAM<br>
+      ✔ Porcentaje de CPU utilizado<br>
+      ✔ Porcentaje de tarjeta gráfica utilizada
+    </p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes dudas, quejas o sugerencias? Contáctanos:</p>
+    <p><strong>Email:</strong> <a href="mailto:ikixacompany@gmail.com">ikixacompany@gmail.com</a></p>
+    <p><strong>Dirección:</strong> Lafontaine 57, Polanco III Secc., Miguel Hidalgo, 11540 Ciudad de México, CDMX</p>
+  </section>
+
+  <footer>
+    <p>&copy; Ikixa Company. Todos los derechos reservados hasta el 2030.</p>
+  </footer>
+
+  <!-- SCRIPT PARA MOSTRAR DETALLES -->
+  <script>
+    function mostrarDetalles() {
+      const detalles = document.getElementById("zco-detalles");
+      detalles.style.display = "block";
+      detalles.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
